@@ -1,22 +1,20 @@
-const myNumber = 12445
-let myName = "Tariq"
-var myAge = "19"
+const account_name = "Ajay"
+let account_num = "123"
+var account_code = "acb123"
+account_branch = "Delhi"
 
-myCity = "Delhi"
+console.table([account_name , account_num , account_code , account_branch])
 
-// console.log(myNumber)
-console.table([myNumber , myName , myAge , myCity])
+// don't use var because it has scoping problem 
 
-// myNumber = 12 const will not change
-myName = "MD TARIQ"
-myAge = "20"
-myCity = "Kolkata"
-console.table([myNumber , myName , myAge , myCity])
+// const is used as it never changes after declaring 
 
-let newCity = myCity 
-console.log(newCity)
+// you can only change let variable
 
-// Prefer not to use var because it has scoping problem Only use let it's better
+// we can also use a identifier without giving it the variables
 
-let myStudies;
-console.table([myNumber , myName , myAge , myCity , myStudies])
+// if we don't defined the variable like if we only declare it then it's value will be undefined 
+// eg.
+
+let name;
+console.log(name); // output : undefined

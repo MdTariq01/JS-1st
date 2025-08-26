@@ -1,31 +1,23 @@
-let num = "12"
+let num = "33"
+let otherNum = Number(num)
 
-console.log(typeof num)
-console.log(typeof(num))
+console.log(otherNum);
+console.log(typeof otherNum);
 
-let newNum = Number(num)
-console.log(newNum);
-console.log(typeof newNum);
+let password = "124abc"
 
-let someNumber = "123abc"
-let otherNumber = Number(someNumber)
+let newPassword = Number(password)
 
-console.log(someNumber)
+console.log(newPassword)
+console.log(typeof newPassword);
 
-console.log(otherNumber)
-console.log(typeof otherNumber);
+let isset = true
 
-let isloggin = true
+let realset = String(isset)
 
-let loggin = String(isloggin)
+console.log(realset);
+console.log(typeof realset);
 
-console.log(loggin)
-console.log(typeof loggin)
 
-let hi = 10
-let number = Boolean(hi)
-
-console.log(number);
-console.log(typeof number)
 
 

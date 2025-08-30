@@ -1,7 +1,7 @@
 // singleton is created when we declare an object like this-
 // Object.create
 
-//BUT we use this one we make instances of the object- 
+//BUT we use this one we make literals of the object- 
 
 // const obj = {}
 

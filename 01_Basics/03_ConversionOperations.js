@@ -8,8 +8,8 @@ let password = "124abc"
 
 let newPassword = Number(password)
 
-// console.log(newPassword)
-// console.log(typeof newPassword);
+console.log(newPassword) // output is Nan
+console.log(typeof newPassword); // type although is Number
 
 let isset = true
 
@@ -18,7 +18,7 @@ let realset = String(isset)
 // console.log(realset);
 // console.log(typeof realset);
 
-// ******************OPERATIONS************************
+// ****************** OPERATIONS ************************
 
 /* 
 
@@ -33,23 +33,15 @@ console.log(3%3); // remainder
 
 // always try to write clean code as clean as possible
 
-// console.log(1+ "2");
-// console.log("1" + 2);
+// console.log(1+ "2"); // output is 12
+// console.log("1" + 2); // output is 12
 
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
+// console.log("1" + 2 + 2); // output is 122
+// console.log(1 + 2 + "2"); // output is 32
 
-console.log(+true);
+console.log(+true); // output is 1 as true is converted to number (Binary)
 
-console.log(+"a"); // adding + acts as type conversion to Number like [Number()]
+// console.log(+"a"); // adding + acts as type conversion to Number like [Number()]
 
 // increment operator by mdn 
-
-
-
-
-
-
-
-
 

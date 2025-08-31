@@ -4,8 +4,16 @@
 // no conversion just checking the value if they are equal or not
 
 // console.log(null > 0) // false 
-// console.log(null == 0) // false
-// console.log(nul >= 0) //true (special case)
+// console.log(null == 0) // false (special case only for ==)
+// console.log(nul >= 0) //true 
+
+console.log(null == undefined);
+console.log("2" < "12") // false as first the first character will be checked 2 and 1 so 2 is bigger then nothing matters so "2" > "12"
+console.log("10" < "2"); // true
+
+console.log("3" < "1000"); // false
+
+
 
 // as null is converted to 0 by comparison operators except for == as it's a exception
 
@@ -41,12 +49,13 @@ false == 0	    ✅ true  	false → 0
 true === 1	    ❌ false	  boolean vs number
 
 
-🔹 String Comparisons (Lexicographic)
+🔹 String Comparisons (Lexicographic meand dictonary order)
 
 Expression	        Result	            Why
 "apple" < "banana"	✅ true	       dictionary order
 "2" < "12"	      ❌ false	    "2" > "1" (first character comparison)
 "10" < "2"	        ✅ true         	"1" < "2"
+
 
 
 🔹 Objects & Arrays

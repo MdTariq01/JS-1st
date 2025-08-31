@@ -1,6 +1,6 @@
 // Primitive and Reference(Non-Primitive)
 
-// in primitive everything store in the stack memory and in this there we get a copy of things
+// In primitive everything store in the stack memory and in this there we get a copy of things
 
 let name = "noName"
 let myname = name

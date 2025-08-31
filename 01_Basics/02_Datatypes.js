@@ -19,6 +19,8 @@ let temperature = null // yup null is also a data type in js
 // undefined
 // symbols => uniqness
 
+// const mysybol = Symbol("Tariq") // way to define symbol
+
 console.log(typeof "Tariq")
 console.log(typeof 234)
 console.log(typeof True)
@@ -28,3 +30,4 @@ console.log(typeof undefined) // undefined type is undefined
 
 console.log(typeof(null));
 
+console.log(mysybol);

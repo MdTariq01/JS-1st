@@ -66,19 +66,51 @@ const data = [
     }
 ]
 
-console.log(data[2]) // as it's like a array we call it like we do it in array
+// console.log(data[2]) // as it's like a array we call it like we do it in array
 
-console.log(user);
+// console.log(user);
 
 // ++++++++ IMPORTANT +++++++++++
 
-console.log(Object.keys(user)); // this will take keys from that object and make an array of those so we will be able to use loops ans makes it easier
-console.log(Object.values(user)) // just like above but for values not for keys
+// console.log(Object.keys(user)); // this will take keys from that object and make an array of those so we will be able to use loops ans makes it easier
+// console.log(Object.values(user)) // just like above but for values not for keys
 
-console.log(Object.entries(user)); // just like above for for a whole key and value 
+// console.log(Object.entries(user)); // just like above for for a whole key and value 
 // like this = [ [ 'id', '123acb' ], [ 'name', 'alex' ], [ 'isloggedIN', false ] ]
 
 // very useful
-console.log(user.hasOwnProperty("isloggedIN")); // will check if this key exist in the object or not returns boolean 
-console.log(user.hasOwnProperty("islogged"));
+// console.log(user.hasOwnProperty("isloggedIN")); // will check if this key exist in the object or not returns boolean 
+// console.log(user.hasOwnProperty("islogged"));
 
+// ++++++++++++++++ Object destructuring +++++++++++++++++++++++++++++
+
+const course = {
+    coursename : "JsinHindi" ,
+    price : "999" ,
+    instructor : "hitesh"
+}
+
+course.instructor
+
+// const {the value name : new name (if not given it's alright)} = object name
+const {instructor : courseInstructor} = course
+
+// console.log(instructor);
+console.log(courseInstructor);
+
+//json format
+
+// {
+//     "name" : "Tariq" ,
+//     "id" : "123acc" ,
+//     "sessoin" : false
+// }
+
+// json another format
+[
+    {} ,
+    {},
+    {}
+]
+
+//json is js object format

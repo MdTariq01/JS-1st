@@ -73,4 +73,3 @@ function myArray(array) {
 console.log(myArray(arr));
 
 console.log(myArray([3,5,6,6]));
-

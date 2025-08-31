@@ -51,4 +51,3 @@ addtwo(6) // will not work as the function is initialized in the next line
 const addtwo = function(num) {
     return num+=2
 }
-

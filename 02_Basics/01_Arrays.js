@@ -45,7 +45,4 @@ console.log("C " , numbers);
 
 console.log(mynumber1);
 
-
-
-
-// pop shife unshift includes indexof .join slice splice 
+// pop shift unshift includes indexof .join slice splice

@@ -32,8 +32,8 @@ console.log(Array.from(numbers))
 
 // INTERESTING ONE FOR INTERVIEW
 
-console.log(Array.from({name: "Tariq"})); // as it don't know what to make a array from it will just return the empty array
-console.log(Array.from(name =  "Tariq"));
+console.log(Array.from({name: "Tariq"})); // it's an object as it don't know what to make a array from it will just return the empty array
+console.log(Array.from(name =  "Tariq")); // will work
 
 const score1 = 100;
 const score2 = 200;
@@ -41,4 +41,4 @@ const score3 = 400;
 
 console.log(Array.of(score1 , score2 , score3)); // this of() method will make of the arguments that are given
 
-// from() and of() and is()
+// from() and of() and isArray()

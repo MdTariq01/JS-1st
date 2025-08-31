@@ -93,7 +93,7 @@ const course = {
 course.instructor
 
 // const {the value name : new name (if not given it's alright)} = object name
-const {instructor : courseInstructor} = course
+const {instructor : courseInstructor} = course // it save us typing course.instructor multiple times just type instructor 
 
 // console.log(instructor);
 console.log(courseInstructor);
@@ -114,3 +114,12 @@ console.log(courseInstructor);
 ]
 
 //json is js object format
+
+const newobject = {
+    name : "tariq" ,
+    id : "123abc"
+}
+
+const {name} = newobject
+
+console.log(name);

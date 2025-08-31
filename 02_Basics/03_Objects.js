@@ -60,4 +60,4 @@ console.log(myobj.greeting()); // Hello World!
 
 console.log(myobj.greeting2());
 
-// console.log(myobj);  it stores as .greeting not as .greeting()
+console.log(myobj);  // it stores as .greeting not as .greeting()

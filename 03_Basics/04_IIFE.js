@@ -16,3 +16,4 @@
 })("Tariq");
 
 // to run two iife side by side put ; after the first one
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM ELEMENT MAKE</title>
+</head>
+<body style="background-color: #414141; color: #fff;">
+  
+</body>
+<script>
+  const DIV = document.createElement('div')
+  console.log(DIV);
+  DIV.setAttribute("id" , "myid")
+  DIV.setAttribute("class" , "myclass")
+  DIV.className = "myotherclass"
+  DIV.style.background = "green"
+  DIV.style.padding = "10px"
+  const addtext = document.createTextNode("Learing JS")
+  DIV.appendChild(addtext)
+  document.body.appendChild(DIV)
+
+  
+</script>
+</html>

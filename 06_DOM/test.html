@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: #414141; color: #fff;">
+  
+</body>
+<script>
+  const mybox = document.createElement('div')
+  const myclass = "heading"
+  const myid = "id-1"
+  const text = "learing js by chai with code"
+
+  function call(mybox , myclass , myid , text) {
+    console.log(mybox);
+    mybox.setAttribute("class" , "myclass");
+    mybox.setAttribute("id" , "myid");
+    mybox.textContent = text
+    // const addtext = document.createTextNode(text);
+    // mybox.appendChild(addtext);
+    document.body.appendChild(mybox);
+    
+  }
+
+  call (mybox , myclass , myid , text);
+</script>
+</html>

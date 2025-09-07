@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+  <ul class="language">
+    <li>javascript</li>
+  </ul>
+</body>
+<script>
+  // adding element in a list
+
+  // const ul = document.querySelector('.language');
+  // const li = document.createElement("li")
+  // const addtext = document.createTextNode("hi")
+  // li.appendChild(addtext);
+  // ul.appendChild(li)
+  
+  function addlanguage (lang_name) {
+    const li =  document.createElement('li')
+    li.innerHTML = `${lang_name}`
+    document.querySelector('.language').appendChild(li)
+  }
+
+  addlanguage("python")
+  addlanguage("java")
+  addlanguage("typescript")
+
+  function addlang_optimal(lang_name) {
+      const li =  document.createElement('li')
+      li.appendChild(document.createTextNode(lang_name))
+      document.querySelector('.language').appendChild(li)
+  }
+  addlang_optimal("golang")
+
+  //edit
+  const second_lang = document.querySelector("li:nth-child(2)")
+  const newli = document.createElement('li')
+  newli.textContent = "mojo"
+  second_lang.replaceWith(newli)
+
+  //edit
+  const first_lang = document.querySelector("li:first-child")
+  const newelement = document.createElement('li')
+  const addtext = document.createTextNode("typescript")
+  newelement.appendChild(addtext)
+  first_lang.replaceWith(newelement)
+
+  // you can also add it easily like this
+  // first_lang.innerHTML = "newlang"
+ // or
+  // first_lang.outerHTML = "<li>Typescript</li>"
+
+  //remove
+  const remove_lang = document.querySelector('li:last-child')
+  remove_lang.remove() // and it's removed
+</script>
+</html>

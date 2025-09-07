@@ -1,0 +1,49 @@
+START GAME
+    │
+    ▼
+Random Number Generated (1-100)
+    │
+    ▼
+USER ENTERS GUESS → Click Submit
+    │
+    ▼
+VALIDATE GUESS
+  ├─ If Not a Number → Alert & Stop
+  ├─ If <1 or >100 → Alert & Stop
+  └─ If Valid → Continue
+    │
+    ▼
+UPDATE MEMORY & UI
+  ├─ prevGuess.push(guess)   (store internally)
+  ├─ guesslot.innerHTML += guess  (show previous guesses)
+  ├─ remaining.innerHTML--  (show guesses left)
+  └─ Clear input box
+    │
+    ▼
+CHECK GUESS
+  ├─ guess == randomNumber → Display "You Win!" → End Game
+  ├─ guess < randomNumber → Display "Too Low"
+  └─ guess > randomNumber → Display "Too High"
+    │
+    ▼
+CHECK MAX ATTEMPTS (10)
+  ├─ If reached → Display "Game Over, Number was X" → End Game
+  └─ Else → Wait for next guess
+    │
+    ▼
+END GAME
+  ├─ Disable input
+  ├─ Show "Start New Game" button
+    │
+    ▼
+USER CLICKS "Start New Game"
+    │
+RESET GAME
+  ├─ Generate new random number
+  ├─ Clear previous guesses display
+  ├─ Reset guesses remaining
+  ├─ Enable input
+  └─ Clear prevGuess array
+    │
+    ▼
+GAME RESTARTS

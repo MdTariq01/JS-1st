@@ -27,6 +27,8 @@ console.log(today.day);    // 28
 const now1 = now1.plainDateTimeISO();
 console.log(now.toString()); // 2025-08-28T23:05:00
 
+// Temporal is not out in chrome and other browsers so use Date which is inbuilf function
+
 /*
  📖 Temporal API Cheat Sheet
 

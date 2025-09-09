@@ -1,0 +1,95 @@
+
+JavaScript Event Object – Full Notes
+====================================
+
+What is `event`?
+----------------
+- In JavaScript, when an event (like click, keydown, etc.) happens, the browser creates an event object.
+- This object is automatically passed to the event handler.
+- It contains information about the event (type, time, source element, mouse position, key pressed, etc.).
+
+------------------------------------------------------------
+Common Properties
+------------------------------------------------------------
+1. type
+   - Returns the event type ("click", "keydown", "submit").
+
+2. timeStamp
+   - Time (ms) when event was created, relative to page load.
+
+3. defaultPrevented
+   - Boolean, true if preventDefault() was called.
+
+4. target
+   - The original element that triggered the event.
+
+5. currentTarget
+   - The element whose listener is currently running.
+
+6. srcElement, toElement, sourceElement (Old IE)
+   - Legacy versions of target. Use target in modern code.
+
+------------------------------------------------------------
+Mouse Event Properties
+------------------------------------------------------------
+- clientX, clientY → Mouse coordinates relative to viewport.
+- screenX, screenY → Mouse coordinates relative to screen/monitor.
+- relatedTarget   → The element mouse came from (mouseout) or goes to (mouseover).
+
+------------------------------------------------------------
+Keyboard Event Properties
+------------------------------------------------------------
+- key     → Actual key value ("a", "Enter", "Escape").
+- code    → Physical key ("KeyA", "ArrowLeft").
+- keyCode → Old numeric code (deprecated).
+- altKey, ctrlKey, shiftKey, metaKey → true/false if pressed.
+
+------------------------------------------------------------
+Keyboard Events
+------------------------------------------------------------
+1. keydown
+   - Fires when key is pressed, repeats if held.
+
+2. keypress (Deprecated)
+   - Fires only for character keys.
+
+3. keyup
+   - Fires when key is released.
+
+Order for typing "A":
+keydown → keypress → keyup
+
+------------------------------------------------------------
+Event Methods
+------------------------------------------------------------
+- preventDefault() → Stops default action (like link navigation).
+- stopPropagation() → Stops event from bubbling up to parent elements.
+- stopImmediatePropagation() → Prevents other listeners on the same element from running.
+
+------------------------------------------------------------
+Event Flow
+------------------------------------------------------------
+1. Capturing phase → Event goes down (window → document → parent → target).
+2. Target phase   → Event reaches target element.
+3. Bubbling phase → Event bubbles up (target → parent → document → window).
+
+------------------------------------------------------------
+Quick Cheat Sheet Table
+------------------------------------------------------------
+Property / Method              Description
+-----------------------------  -----------------------------
+type                           Event type ("click", "keydown")
+timeStamp                      Time since page load (ms)
+target                         Original element triggering event
+currentTarget                  Element whose handler is running
+defaultPrevented               True if preventDefault() was called
+clientX, clientY               Mouse pos in viewport
+screenX, screenY               Mouse pos on screen
+relatedTarget                  Mouse source/target in over/out
+key                            Key value ("a", "Enter")
+code                           Physical key ("KeyA", "ArrowLeft")
+altKey, ctrlKey, shiftKey,
+metaKey                        Modifier key status
+preventDefault()               Cancel default action
+stopPropagation()              Stop bubbling
+stopImmediatePropagation()     Stop all listeners on same element

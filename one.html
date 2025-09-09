@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+
+      // events to read in mdn-
+    // 1. types
+    // 2. timestamp
+    // 3. defaultprevented
+    // 4. target
+    // 5. to 
+    // 6. source element
+    // 7. current target
+    // 8. clientX , clientY , screenX , screenY
+    // 9. alt key , ctrl key , shift key , keyCode
+
+    // Onclick methods 
+    // all events in js runs sequencial except for some events like browser events and async etc.
+
+    // method 1 : function 
+    // document.getElementById('owl').onclick = function() {
+    //   alert("it's an owl") // it can work but best is event listener that has more features
+    // }
+
+    //method 2 : old methods just for knowledge
+    // attachEvent()
+    //jQuery - on
+
+    //method 3 : Probably the best
+    // Event_Listeners
+     // it has one additional parameter too which is false and it's default so we don't write it but yeah for know
+    // document.getElementById('owl').addEventListener('click' , function (e) {
+    //   console.log(e)
+    // } , false) // event propogation it's the name of the attribute
+
+    // if false then it's event bubbling happens and if it's true then it's event capturing happens
+
+    // eg.
+    // document.getElementById('images').addEventListener('click' , function (e) {
+    //   console.log("Clicked on the ul , The whole list")
+    // } , false) // if true then bubbleing don't happens , capturing happen means the way the function written it will implement like that
+    // if false bubbling happen like pyramid the last one will   come first
+
+    // document.getElementById('owl').addEventListener('click' , function (e) {
+    //   console.log("Clicked on the owl")
+    // } , true) 
+
+    // to stop this bubbling we can also this method [ e.stopPropagation() ] means the other one will not be working
+
+    // document.getElementById('owl').addEventListener('click' , function (e) {
+    //   console.log("Clicked on the owl")
+    //   e.stopPropagation();
+    // } , true) 
+
+    // document.getElementById('google').addEventListener('click' , function (e) {
+    //   e.preventDefault(); // it will prevent the default thing means it will not work the way it work
+    //   e.stopPropagation()
+    //   console.log("google clicked");
+      
+    // } , false)
+
+    // we want to click on li and deseapre it 
+
+    document.querySelector('#images').addEventListener('click' , function (e) {
+      // console.log(e); // will give all events
+      // console.log(e.target); // will give the target that is on clicked 
+      console.log(e.target.parentNode); // will give it's parent node and here clicking on image it will give it parent that is li
+      
+      // let removeIt  = e.target.parentNode
+      // there are two ways to remove first one is .remove() method
+      // removeIt.remove(); // it will work but if we click in li then everything will be removed if used e.target.parentNode 
+
+       e.target.tagName // it will give the tag name on clicked
+       if(e.target.tagName == 'IMG') {
+            console.log(e.target.id);
+            let removeIt  = e.target.parentNode
+            removeIt.remove()
+       }
+      // other is
+      // removeIt.parentNode.removeChild(removeIt)
+    } , false)
+    
+</script>
+</html>

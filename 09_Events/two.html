@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h1>Tariq</h1>
+    <button id = "stop">Stop</button>
+</body>
+<script>
+  // Async functions 
+  const sayTariq = function () {
+      console.log('Tariq');
+    } 
+
+    // setTimeout(sayTariq, 5000)
+
+
+    // document.querySelector('h1').innerHTML = '<h1>Best js series</h1>'  // this will run instantly 
+    // for a wait then run
+    const changeText = function () {
+      document.querySelector('h1').innerHTML = '<h1>Best js series</h1>'
+    }
+    const changeMe = setTimeout(changeText, 2000);
+
+    // clearTimeout(changeMe) this will just remove the setTimeout but what's the gain we add timeout and just remove it so for better way hold it in a variable and we get a button then added event listener is clicked and putted it in the function that way if clicked the then the timeout will be cleared
+
+    document.querySelector('#stop').addEventListener('click' , function (e) {
+      clearTimeout(changeMe)
+      console.log('stop');
+    })
+
+    
+</script>
+</html>

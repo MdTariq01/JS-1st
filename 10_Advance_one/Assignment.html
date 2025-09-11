@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Assignment by Chai with code</title>
+  <style>
+    :root{
+      --bg: #313131;
+      --card-bg: #2b2b2b;
+      --accent: #fff;
+      --muted: #bdbdbd;
+      --outline: rgba(255,255,255,0.06);
+      --radius: 12px;
+    }
+
+    /* page layout */
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--accent);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    /* card */
+    .card {
+      width: 220px;
+      padding: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid var(--outline);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* avatar */
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.08);
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    /* name & small info */
+    .meta {
+      text-align:center;
+      line-height:1;
+    }
+
+    .meta .title {
+      font-weight:600;
+      font-size:1rem;
+      margin-bottom:4px;
+    }
+
+    .meta .subtitle {
+      font-size:0.82rem;
+      color:var(--muted);
+    }
+
+    /* button row */
+    .actions {
+      display:flex;
+      gap:8px;
+      width:100%;
+      justify-content:center;
+      margin-top:4px;
+    }
+
+    button {
+      cursor:pointer;
+      padding:8px 12px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.06);
+      background: transparent;
+      color: var(--accent);
+      font-size:0.95rem;
+      transition: transform .12s ease, background .12s ease;
+    }
+
+    button:active{ transform: translateY(1px); }
+
+    button.primary{
+      background: rgba(255,255,255,0.06);
+      font-weight:600;
+    }
+
+    /* follower counter */
+    .follower {
+      display:block;
+      margin-top:6px;
+      font-weight:700;
+      font-size:1.05rem;
+      color: var(--accent);
+    }
+
+    /* responsive */
+    @media (max-width:360px){
+      .card{ width: 90%; padding:14px; }
+      .avatar{ width:80px; height:80px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="region" aria-label="Profile card">
+    <!-- avatar -->
+    <a class="avatar" href="https://github.com/chai-with-code" target="_blank" rel="noopener noreferrer" aria-label="Open profile">
+      <img src="https://avatars.githubusercontent.com/u/11613311?v=4" alt="Profile avatar">
+    </a>
+
+    <!-- name / subtitle -->
+    <div class="meta">
+      <div class="title">Chai with Code</div>
+      <div class="subtitle">Open-source enthusiast</div>
+    </div>
+
+    <!-- actions -->
+    <div class="actions">
+      <!-- note: id has no spaces -->
+      <button id="show-followers" class="primary" type="button">Show followers</button>
+      <button id="visit" type="button" onclick="window.open('https://github.com/chai-with-code','_blank')">Visit</button>
+    </div>
+
+    <!-- follower count (initially empty) -->
+    <span class="follower" id="follower-count" aria-live="polite"></span>
+  </div>
+
+  <!-- Optional: small inline JS to demonstrate updating follower text.
+       Remove if you only wanted pure HTML/CSS. -->
+  <script>
+    const button = document.getElementById('show-followers');
+    const follower = document.getElementById('follower-count')
+
+    button.addEventListener('click' , (e) => {
+        const link = "https://api.github.com/users/hiteshchoudhary";
+        follower.textContent = "Loading...";
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET' , link);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            follower.innerHTML = data.followers + " followers";
+          }
+        }
+        xhr.send();
+    })
+  </script>
+</body>
+</html>

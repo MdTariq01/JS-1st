@@ -155,12 +155,12 @@
         xhr.open('GET' , link);
         xhr.onreadystatechange = function () {
           if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
+         xhr.send();
+    })    const data = JSON.parse(this.responseText)
             follower.innerHTML = data.followers + " followers";
           }
         }
-        xhr.send();
-    })
+       
   </script>
 </body>
 </html>

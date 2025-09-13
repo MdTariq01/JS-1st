@@ -88,7 +88,6 @@ async function consumePromiseFive () {
     console.log(error);
   }
 }
-
 consumePromiseFive()
 
 // async function getAllUsers() {
@@ -103,7 +102,6 @@ consumePromiseFive()
 // getAllUsers()
 
 //fetch() gives promise so we are just using resolve things like .then() and .catch()
-
 fetch('https://api.github.com/users/MdTariq01').then((response)=> {
   return response.json()
 }).then(function(reseivedResponse){
@@ -111,3 +109,4 @@ fetch('https://api.github.com/users/MdTariq01').then((response)=> {
 }).catch(function(error) {
   console.log("ERROR HERE");
 })
+// o

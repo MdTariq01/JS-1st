@@ -12,7 +12,13 @@ function createUser(userName , email , password) {
 const chai = new createUser("chai" , "chai@chai.com" , 124)
 console.log(chai);
 
+// basically if we call another function inside a function then in stack this keyword will do problem as it will
+// not know which to give context then it will give {} empty object 
+
+// for better use call() and pass this and other parameter with it
+
 /*
+
 1. The (this) keyword
 
 this refers to the execution context of the function.

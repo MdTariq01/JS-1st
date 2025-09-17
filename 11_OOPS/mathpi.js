@@ -31,7 +31,7 @@ Object.defineProperty( user , "username" , {
 console.log(Object.getOwnPropertyDescriptor(user , "username"))
 
 for (let [key , value] of Object.entries(user)) {
-  if(typeof value !== 'function') {
-    console.log(`${key} : ${value}`);
+  if(typeof value !== 'function') { // check for the function 
+    console.log(`${key} : ${value}`); 
   }
 }

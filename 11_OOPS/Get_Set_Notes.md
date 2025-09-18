@@ -3,22 +3,7 @@
 JavaScript provides **getters** (`get`) and **setters** (`set`) to define **object properties with controlled access**.  
 They allow you to run custom code when getting or setting a property instead of just directly reading or writing it.  
 
----
-
-## ✅ 1. Getter (`get`)
-- A **getter** is a method that is executed when a property is accessed.  
-- It lets you **compute or transform values dynamically**.  
-- **Syntax**:  
-  ```js
-  get propertyName() {
-    // return something
-  }
-# 🔹 Getters and Setters in JavaScript
-
-JavaScript provides **getters** (`get`) and **setters** (`set`) to define **object properties with controlled access**.  
-They allow you to run custom code when getting or setting a property instead of just directly reading or writing it.  
-
----
+--- 
 
 ## ✅ 1. Getter (`get`)
 A **getter** is a method that is executed when a property is accessed.  

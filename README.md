@@ -34,8 +34,10 @@ Strong foundation in core JavaScript concepts.
 
 Practical coding experience by solving real examples.
 
+Preparedness for frontend frameworks (React, Vue, etc.) and backend (Node.js).
+
 ---
 
 Happy coding 💫
-Preparedness for frontend frameworks (React, Vue, etc.) and backend (Node.js).
+
    

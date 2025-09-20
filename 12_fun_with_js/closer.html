@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closer</title>
+</head>
+<body>
+  <button id = "orange">orange</button>
+  <button id = "green">green</button>
+</body>
+<script>
+// LEXICAL SCOPING
+//   function init() {
+//     let name = "Mozilla"; 
+//     function displayName() {
+//       console.log(name);
+//     }
+//     displayName();
+// }
+// init();
+
+// ClOSER
+
+function makeFunc() {
+    let name = "Mozilla";
+    function displayName() {
+      console.log(name);
+    }
+    return displayName; // basically in the lexical scoping we were just printing it here or calling it here but here in closer we return the reference then the whole scope will be returned with this means even name will be returned even if only displayName is returned due tu lexical scoping
+}
+const myFunc = makeFunc();
+myFunc();
+
+</script>
+<script>
+// document.getElementById("orange").onclick = function() {
+//   document.body.style.backgroundColor = `orange`
+  
+// }
+// document.getElementById("green").onclick = function() {
+//   document.body.style.backgroundColor = `green`
+// }
+
+//Generic
+function clickHandler(color) {
+  // document.body.style.backgroundColor = `color` // will not work here
+
+  function tariq () {
+      document.body.style.backgroundColor = `${color}`
+  }
+  return tariq;
+}
+
+document.getElementById("orange").onclick = clickHandler("orange");
+document.getElementById("green").onclick = clickHandler("green"); // this will run instantly and the above one too so to address this we have to change some things in the about function
+</script>
+</html>
